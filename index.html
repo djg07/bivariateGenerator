@@ -5,14 +5,35 @@
     <title></title>
 
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+    <section id="options">
+
+        <div class="row">
+            <div class="col-xs-6 text-center"><h4>Grid Size:</h4> </div>
+            <div class="col-xs-6">
+                <select class="form-control">
+                    <option value="3x3">3x3</option>
+                    <option value="4x4">4x4</option>
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+
+    </section>
 
     <script src="libs/jquery.js"></script>
-    <script src="libs/bootstrap.js"></script>
     <script src="libs/underscore.js"></script>
+    <script src="libs/bootstrap.js"></script>
+    <script src="libs/backbone.js"></script>
 
-    <script src="libs/jquery.js"></script>
+
+    <script src="models/gridElement.js"></script>
 </body>
 </html>
