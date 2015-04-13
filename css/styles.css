@@ -1,6 +1,22 @@
-#options {
+#optionsContainer {
     /*width:50%;*/
     width:20%;
+
+}
+
+#gridContainer {
+    width:20%;
+    height:500px;
+
+}
+
+.gridElement {
+    border: 1px solid black;
+    width: 33%;
+    height: 33%;
+    float:left;
+    padding:5%;
+
 
 }
 
