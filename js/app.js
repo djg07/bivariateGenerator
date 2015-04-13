@@ -4,12 +4,20 @@
 
 
 var x1 = new app.gridElement({
-    positionXY: [(0,0)],
+    positionXY: [(1,1)],
     positionDescription: "Bottom Left",
-    hexColour: "#FFF",
+    hexColour: "#FFFFFF",
     rgbColour: [(0,0,0)]
 
 
+
+});
+
+var x2 = new app.gridElement({
+    positionXY: [(1,3)],
+    positionDescription: "Bottom Right",
+    hexColour: "#FFFFFF",
+    rgbColour: [(0,0,0)]
 
 })
 
