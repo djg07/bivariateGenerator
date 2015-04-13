@@ -7,12 +7,12 @@ var app = app || {};
 app.gridElement = Backbone.Model.extend({
 
     defaults: {
-        position: "None",
-        hexColour: "#FFFFF",
-        rgbColour: ""
+        positionXY: [],
+        positionDescription: "",
+        hexColour: "",
+        rgbColour: []
     }
 
 
 });
 
-var gridModel1 = new app.gridElement();
