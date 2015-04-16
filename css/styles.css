@@ -1,9 +1,30 @@
+#optionsContainer {
+    width:20em;
+
+    background-color:#F3F9FF;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.optionsLabel {
+    padding:.4em;
+}
+
 .gridElement {
     border: 1px solid black;
+    width:33%;
+    height:5em;
+
+    float:left;
 
 
 }
 
 #gridContainer {
-
+    width:20em;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 }
+

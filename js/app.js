@@ -13,15 +13,13 @@ var x1 = new app.gridElement({
     hexColour: "#FFFFFF",
     rgbColour: [(0,0,0)]
 
-
-
 });
 
-var x2 = new app.gridElement({
-    positionXY: [(1,3)],
-    positionDescription: "Bottom Right",
-    hexColour: "#FFFFFF",
-    rgbColour: [(0,0,0)]
+var optionsM = new app.optionsModel();
 
-})
+
+var optionsV = new app.optionsView({
+    model: optionsM
+});
+
 
