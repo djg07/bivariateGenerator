@@ -12,14 +12,26 @@
 }
 
 .gridOption {
-    width:40% !important;
+    width:41% !important;
 }
 
 #hexOptions {
-    margin:auto;
+    margin-left:1.5em;
 
-    left:10%;
+
 }
+
+.hexOptionsPreview {
+    float:left;
+    width:1em;
+    height:1em;
+    border: 1px solid black;
+    background-color:#245269;
+}
+
+
+
+
 
 .gridElement {
     border: 1px solid black;
