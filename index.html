@@ -8,34 +8,31 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<h3>Bi-Variate Grid Size:</h3>
-<section id="optionsContainer" class="">
-<script type="text/template" id="optionsTemplate">
+    <h3>Bi-Variate Grid Size:</h3>
+    <section id="optionsContainer" class="">
+    <script type="text/template" id="optionsTemplate">
 
-            <div>
-                <label class="optionsLabel">Size:</label>
-                    <select id="gridSize" class="form-control">
-                        <option value="3x3">3x3</option>
-                        <option value="4x4">4x4</option>
-                    </select>
-                <br>
+                <div>
+                    <label class="optionsLabel">Size:</label>
+                        <select id="gridSize" class="form-control">
+                            <option value="3x3">3x3</option>
+                            <option value="4x4">4x4</option>
+                        </select>
+                    <br>
 
-                <label class="optionsLabel">Insert Colour Hex Codes: </label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Top Left" aria-describedby="basic-addon2">
-                        <input type="text" class="form-control" placeholder="Top Right" aria-describedby="basic-addon2">
-                        <input type="text" class="form-control" placeholder="Bottom Left" aria-describedby="basic-addon2">
-                        <input type="text" class="form-control" placeholder="Bottom Right" aria-describedby="basic-addon2">
+                    <label class="optionsLabel">Insert Colour Hex Codes: </label>
+                        <div id="hexOptions" class="input-group">
+                            <input type="text" class="form-control gridOption" placeholder="Top Left" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control gridOption" placeholder="Top Right" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control gridOption" placeholder="Bottom Left" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control gridOption" placeholder="Bottom Right" aria-describedby="basic-addon2">
 
-                    </div>
-
-
-
-            </div>
-
-</script>
-</section>
+                        </div>
+                </div>
+    </script>
+    </section>
     <section id="gridContainer" class="">
+        <script type="text/template" id="gridTemplate">
         <div>
 
                 <div class="gridElement">(3,1)</div>
@@ -55,6 +52,7 @@
                 <div class="gridElement">(1,3)</div>
             </div>
         </div>
+        </script>
     </section>
 
     <script src="libs/jquery.js"></script>

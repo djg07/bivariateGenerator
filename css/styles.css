@@ -11,6 +11,16 @@
     padding:.4em;
 }
 
+.gridOption {
+    width:40% !important;
+}
+
+#hexOptions {
+    margin:auto;
+
+    left:10%;
+}
+
 .gridElement {
     border: 1px solid black;
     width:33%;
