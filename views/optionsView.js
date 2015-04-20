@@ -18,18 +18,10 @@ app.optionsView = Backbone.View.extend({
     },
 
     contentChanged: function(e) {
-        alert('content changed');
-        //console.log(e);
-        //debugger;
         this.model.changeValue(e);
-
-        //console.log(this.model);
-
-        //$('.hexOptionsPreview')
     },
 
     render: function() {
-        console.log("rendering")
         this.$el.html(this.template());
 
     }

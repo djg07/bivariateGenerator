@@ -10,30 +10,47 @@ app.optionsModel = Backbone.Model.extend({
     defaults: {
 
         size: "",
-        topLeft: {
+        topLeftOption: {
             value: "",
             link: $("#topLeftPreview")
         },
-        topRight: {
+        topRightOption: {
             value: "",
             link: $("#topRightPreview")
         },
-        bottomLeft: {
+        bottomLeftOption: {
             value: "",
             link: $("#bottomLeftPreview")
 
         },
-        bottomRight: {
+        bottomRightOption: {
             value: "",
             link: $("#bottomRightPreview")
         }
+
+    },
+
+    changeCSS: function(colour, id) {
+        //console.log(colour);
+        //console.log(event)
+        //this.set((id.toString()).value, colour);
+        //console.log(id);
+        //console.log(this.set((id).link), "t");
+        //
+
+        //this.(id.toString()).css("color", "yellow");
 
 
     },
 
     changeValue: function(e) {
-        console.log($(e.currentTarget).val())
-        console.log(e);
-        this.set("topLeft.value", "FSFDS");
+        var colour = $(e.currentTarget).val()
+        var id = e.currentTarget.id;
+
+
+        this.get(id.toString).set({ value: true });
+
+        this.changeCSS(colour, event)
+
     }
 });
