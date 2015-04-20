@@ -22,23 +22,25 @@
 
                     <label class="optionsLabel">Insert Colour Hex Codes: </label>
                         <div id="hexOptions" class="input-group">
-                            <span class="hexOptionsPreview"></span>
-                            <input type="text" class="form-control gridOption" placeholder="Top Left" aria-describedby="basic-addon2">
+                            <span id="topLeftPreview" class="hexOptionsPreview"></span>
+                            <input id="topLeftOption" type="text" class="form-control gridOption" placeholder="Top Left" aria-describedby="basic-addon2">
 
 
-                            <input type="text" class="form-control gridOption" placeholder="Top Right" aria-describedby="basic-addon2">
-                            <span class="hexOptionsPreview"></span>
+                            <input id="topRightOption" type="text" class="form-control gridOption" placeholder="Top Right" aria-describedby="basic-addon2">
+                            <span id="topRightPreview" class="hexOptionsPreview"></span>
 
                             <br>
                             <br>
-                            <span class="hexOptionsPreview"></span>
-                            <input type="text" class="form-control gridOption" placeholder="Bottom Left" aria-describedby="basic-addon2">
+                            <span id="bottomLeftPreview" class="hexOptionsPreview"></span>
+                            <input id="bottomLeftOption" type="text" class="form-control gridOption" placeholder="Bottom Left" aria-describedby="basic-addon2">
 
-
-
-                            <input type="text" class="form-control gridOption" placeholder="Bottom Right" aria-describedby="basic-addon2">
-                            <span class="hexOptionsPreview"></span>
+                            <input id="bottomRightOption" type="text" class="form-control gridOption" placeholder="Bottom Right" aria-describedby="basic-addon2">
+                            <span id="bottomRightPreview" class="hexOptionsPreview"></span>
                         </div>
+                    <div>
+                        <button id="generateGrid">Generate Grid</button>
+                    </div>
+
                 </div>
     </script>
     </section>
