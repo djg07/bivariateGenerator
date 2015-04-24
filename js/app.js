@@ -4,17 +4,6 @@
 
 var gridSize = $('#gridSize :selected').val();
 
-
-
-
-var x1 = new app.gridElement({
-    positionXY: [(1,1)],
-    positionDescription: "Bottom Left",
-    hexColour: "#FFFFFF",
-    rgbColour: [(0,0,0)]
-
-});
-
 var optionsM = new app.optionsModel();
 
 

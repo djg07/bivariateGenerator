@@ -10,23 +10,10 @@ app.optionsModel = Backbone.Model.extend({
     defaults: {
 
         size: "",
-        topLeftOption: {
-            value: "",
-            link: $("#topLeftPreview")
-        },
-        topRightOption: {
-            value: "",
-            link: $("#topRightPreview")
-        },
-        bottomLeftOption: {
-            value: "",
-            link: $("#bottomLeftPreview")
-
-        },
-        bottomRightOption: {
-            value: "",
-            link: $("#bottomRightPreview")
-        }
+        topLeftOption: "",
+        topRightOption: "",
+        bottomLeftOption: "",
+        bottomRightOption: ""
 
     },
 
@@ -46,11 +33,10 @@ app.optionsModel = Backbone.Model.extend({
     changeValue: function(e) {
         var colour = $(e.currentTarget).val()
         var id = e.currentTarget.id;
+        this.set(id.toString(), colour);
 
 
-        this.get(id.toString).set({ value: true });
 
-        this.changeCSS(colour, event)
 
     }
 });
