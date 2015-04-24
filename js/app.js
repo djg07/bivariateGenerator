@@ -11,6 +11,13 @@ var optionsV = new app.optionsView({
     model: optionsM
 });
 
+var gridM = new app.gridModel({
+    inputModel: optionsM
+})
 
+$('#generateGrid').click(function() {
+    alert('t');
+
+})
 
 
