@@ -18,13 +18,13 @@ app.optionsView = Backbone.View.extend({
     },
 
     contentChanged: function(e) {
-        console.log(e);
+        //console.log(e);
         this.model.changeValue(e);
 
     },
 
     render: function() {
-        console.log(this.model.toJSON());
+        //console.log(this.model.toJSON());
 
         this.$el.html(this.template(this.model.toJSON()));
         $('#topLeftPreview').css("background-color", this.model.get('topLeftOption'));
