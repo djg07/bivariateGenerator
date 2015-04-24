@@ -15,6 +15,7 @@ var gridM = new app.gridModel({
     inputModel: optionsM
 })
 
+//Since #generateGrid is being re-rendered upon every refresh, the click listener is being lost
 $('#generateGrid').click(function() {
     alert('t');
 
