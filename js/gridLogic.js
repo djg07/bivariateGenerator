@@ -18,7 +18,7 @@ function generateGridArray(size, model) {
     array[0][0] = ConvertHexToRGB(model.get("topLeftOption"));
     array[0][size-1] = ConvertHexToRGB(model.get("topRightOption"));
     array[size-1][0] = ConvertHexToRGB(model.get("bottomLeftOption"));
-    array[size-1][size-1] = ConvertHexToRGB(model.get("bottomRightOption"));
+    //array[size-1][size-1] = ConvertHexToRGB(model.get("bottomRightOption"));
     return array;
 
 
@@ -33,18 +33,38 @@ function fillArray(array) {
     //}
 
     //solve edges
-    for (var i = 1; i < arraySize; i++) {
+    for (var i = 1; i < arraySize-1; i++) {
         debugger;
         array;
-        array[0][i] = getEdgeElementValue(arraySize, i, array[0][0], array[0][arraySize-1]);
-        array[arraySize-1][i] = getEdgeElementValue(arraySize, i, array[arraySize-1][0], array[arraySize-1][arraySize-1]);
-        array[i][0] = getEdgeElementValue(arraySize, i, array[0][0], array[arraySize-1][0]);
+        array[0][i] = (getEdgeElementValue(arraySize, i, array[0][0], array[0][arraySize-1])); //top
+        array[arraySize-1][i] = (getEdgeElementValue(arraySize, i, array[arraySize-1][0], array[arraySize-1][arraySize-1])); //bottom
+        //array[i][0] = Math.round(parseInt(getEdgeElementValue(arraySize, i, array[0][0], array[arraySize-1][0]))); //left
 
         //array[i][arraySize-1]
     }
     console.log(array);
+    $('#placeholder').append("<br>");
+    for (var i = 0; i < array[0].length; i++) {
+        $('#placeholder').append("<span>(" + array[0][i].toString() + ")</span>");
+    }
+    $('#placeholder').append("<br>");
+    for (var i = 0; i < array[1].length; i++) {
+        $('#placeholder').append("<span>(" + array[1][i].toString() + ")</span>");
+    }
+    $('#placeholder').append("<br>");
+    for (var i = 0; i < array[2].length; i++) {
+        $('#placeholder').append("<span>(" + array[2][i].toString() + ")</span>");
+    }
+    $('#placeholder').append("<br>");
+    for (var i = 0; i < array[3].length; i++) {
+        $('#placeholder').append("<span>(" + array[3][i].toString() + ")</span>");
+    }
 
-    $('#gridContainer').html(array[0].toString());
+
+    //$('#gridContainer').append("<p>(" + array[0].toString() + ")</p>");
+    //$('#gridContainer').append("<p>" + array[1].toString() + "</p>");
+    //$('#gridContainer').append("<p>" + array[2].toString() + "</p>");
+    //$('#gridContainer').append("<p>" + array[3].toString() + "</p>");
 }
 
 function getEdgeElementValue(size, position, lowColourArray, highColourArray) {
@@ -55,9 +75,9 @@ function getEdgeElementValue(size, position, lowColourArray, highColourArray) {
     //    (highColourArray[position+1] - lowColourArray[position+1]),
     //            ];
     //debugger;
-    var delta1 = lowColourArray[0] + (position)*((highColourArray[0] - lowColourArray[0])/(size-1))
-    var delta2 = lowColourArray[1] + (position)*((highColourArray[1] - lowColourArray[1])/(size-1))
-    var delta3 = lowColourArray[2] + (position)*((highColourArray[2] - lowColourArray[2])/(size-1))
+    var delta1 = Math.round(lowColourArray[0] + (position)*((highColourArray[0] - lowColourArray[0])/(size-1)));
+    var delta2 = Math.round(lowColourArray[1] + (position)*((highColourArray[1] - lowColourArray[1])/(size-1)));
+    var delta3 = Math.round(lowColourArray[2] + (position)*((highColourArray[2] - lowColourArray[2])/(size-1)));
 
     console.log(delta1);
     console.log(delta2);

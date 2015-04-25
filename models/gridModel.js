@@ -8,6 +8,7 @@ app.gridModel = Backbone.Model.extend({
 
     defaults: {
         inputModel: ""
+
     }
 
 
