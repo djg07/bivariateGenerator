@@ -30,7 +30,7 @@ app.optionsView = Backbone.View.extend({
         this.model.set("topLeftOption", "#0000CC");
         this.model.set("topRightOption", "#3D991F");
         this.model.set("bottomLeftOption", "#A30000");
-        this.model.set("bottomRightOption", "#FF9900");
+        this.model.set("bottomRightOption", "#FF9901");
 
         $('#topLeftPreview').css("background-color", this.model.get('topLeftOption'));
         $('#topRightPreview').css("background-color", this.model.get('topRightOption'));
