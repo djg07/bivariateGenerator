@@ -61,12 +61,17 @@ function fillArray(array) {
     }
 
     //TODO - USE NESTED FOR LOOP
+    /* SOLVING FOR INNER GRID CELLS */
+
+    for (int j = 1; j < arraySize - 1; j++) {
+
+        array[i]
+
+    }
 
 
-    //$('#gridContainer').append("<p>(" + array[0].toString() + ")</p>");
-    //$('#gridContainer').append("<p>" + array[1].toString() + "</p>");
-    //$('#gridContainer').append("<p>" + array[2].toString() + "</p>");
-    //$('#gridContainer').append("<p>" + array[3].toString() + "</p>");
+
+
 }
 
 function getEdgeElementValue(size, position, lowColourArray, highColourArray) {
