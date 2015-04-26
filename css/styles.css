@@ -39,9 +39,7 @@
 }
 .gridElement {
     border: 1px solid black;
-    width:33%;
-    height:5em;
-
+    width:100px;
     float:left;
 
 
