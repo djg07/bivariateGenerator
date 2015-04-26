@@ -18,7 +18,7 @@ function generateGridArray(size, model) {
     array[0][0] = ConvertHexToRGB(model.get("topLeftOption"));
     array[0][size-1] = ConvertHexToRGB(model.get("topRightOption"));
     array[size-1][0] = ConvertHexToRGB(model.get("bottomLeftOption"));
-    //array[size-1][size-1] = ConvertHexToRGB(model.get("bottomRightOption"));
+    array[size-1][size-1] = ConvertHexToRGB(model.get("bottomRightOption"));
     return array;
 
 
@@ -26,7 +26,7 @@ function generateGridArray(size, model) {
 
 function fillArray(array) {
     arraySize = array.length;
-
+    var edgeIndex = arraySize - 1;
     //TODO SOLVE 4 edges
     //for (var i = 0; i < array[0].length; i ++) {
     //
@@ -35,39 +35,48 @@ function fillArray(array) {
     //solve edges
     for (var i = 1; i < arraySize-1; i++) {
         debugger;
-        array;
+
         array[0][i] = (getEdgeElementValue(arraySize, i, array[0][0], array[0][arraySize-1])); //top
         array[arraySize-1][i] = (getEdgeElementValue(arraySize, i, array[arraySize-1][0], array[arraySize-1][arraySize-1])); //bottom
-        //array[i][0] = Math.round(parseInt(getEdgeElementValue(arraySize, i, array[0][0], array[arraySize-1][0]))); //left
+        array[i][0] = (getEdgeElementValue(arraySize, i, array[0][0], array[arraySize-1][0])); //left
+        array[i][arraySize -1] = (getEdgeElementValue(arraySize, i, array[0][arraySize-1], array[arraySize-1][arraySize-1]))
 
         //array[i][arraySize-1]
     }
+
+    //TODO - USE NESTED FOR LOOP
+    //TODO - USE SET
+    /* SOLVING FOR INNER GRID CELLS */
+
+    //for (int j = 1; j < arraySize - 1; j++) {
+    //
+    //    array[i]
+    //
+    //}
+
+
     console.log(array);
     $('#placeholder').append("<br>");
     for (var i = 0; i < array[0].length; i++) {
-        $('#placeholder').append("<span>(" + array[0][i].toString() + ")</span>");
+        $('#placeholder').append("<span style= 'color: rgb(" + array[0][i].toString() + "')>(" + array[0][i].toString() + ")</span>");
     }
     $('#placeholder').append("<br>");
     for (var i = 0; i < array[1].length; i++) {
-        $('#placeholder').append("<span>(" + array[1][i].toString() + ")</span>");
+        //$('#placeholder').append("<span>(" + array[1][i].toString() + ")</span>");
+        $('#placeholder').append("<span style= 'color: rgb(" + array[1][i].toString() + "')>(" + array[1][i].toString() + ")</span>");
     }
     $('#placeholder').append("<br>");
     for (var i = 0; i < array[2].length; i++) {
-        $('#placeholder').append("<span>(" + array[2][i].toString() + ")</span>");
+        //$('#placeholder').append("<span>(" + array[2][i].toString() + ")</span>");
+        $('#placeholder').append("<span style= 'color: rgb(" + array[2][i].toString() + "')>(" + array[2][i].toString() + ")</span>");
     }
     $('#placeholder').append("<br>");
     for (var i = 0; i < array[3].length; i++) {
-        $('#placeholder').append("<span>(" + array[3][i].toString() + ")</span>");
+        //$('#placeholder').append("<span>(" + array[3][i].toString() + ")</span>");
+        $('#placeholder').append("<span style= 'color: rgb(" + array[3][i].toString() + "')>(" + array[3][i].toString() + ")</span>");
     }
 
-    //TODO - USE NESTED FOR LOOP
-    /* SOLVING FOR INNER GRID CELLS */
 
-    for (int j = 1; j < arraySize - 1; j++) {
-
-        array[i]
-
-    }
 
 
 

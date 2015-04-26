@@ -23,9 +23,10 @@ $('#generateGrid').click(function() {
 
 
 
-$('#placeholder').click(function() {
-
+$('#btnTesting').click(function() {
+    debugger;
     var x = generateGridArray(4, optionsM)
+
     fillArray(x);
 
 });
