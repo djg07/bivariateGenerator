@@ -60,6 +60,8 @@ function fillArray(array) {
         $('#placeholder').append("<span>(" + array[3][i].toString() + ")</span>");
     }
 
+    //TODO - USE NESTED FOR LOOP
+
 
     //$('#gridContainer').append("<p>(" + array[0].toString() + ")</p>");
     //$('#gridContainer').append("<p>" + array[1].toString() + "</p>");
