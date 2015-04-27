@@ -53,7 +53,7 @@ function fillArray(array) {
     var colSet = new Set();
 
     for (var j = 1; j < arraySize - 1; j++) { //row
-        debugger;
+        //debugger;
 
 
         for (var k = 1; k < arraySize -1; k++) { //column
@@ -78,35 +78,39 @@ function fillArray(array) {
 
     console.log(array);
     $('#placeholder').append("<br>");
-    for (var i = 0; i < array[0].length; i++) {
-        $('#placeholder').append("<span style= 'display:block;width:100px; height:100px; float:left; background-color: rgb(" + array[0][i].toString() + "')>(" + array[0][i].toString() + ")</span>");
+    for (var i = 0; i < array.length; ++i) {
+        for (var k = 0; k < (array[i].length); ++k) {
+            debugger;
+            $('#placeholder').append("<span style= 'display:block;width:100px; height:100px; float:left; background-color: rgb(" + array[i][k].toString() + "')>(" + array[i][k].toString() + ")</span>");
+        }
+        $('#placeholder').append("<br><br><br><br><br><br>")
         //$('#placeholder .span').addClass('gridElement');
     }
-    $('#placeholder').append("<br><br><br><br><br>");
-    for (var i = 0; i < array[1].length; i++) {
-        //$('#placeholder').append("<span>(" + array[1][i].toString() + ")</span>");
-        $('#placeholder').append("<span style= 'display:block;width:100px; height:100px; float:left; background-color: rgb(" + array[1][i].toString() + "')>(" + array[1][i].toString() + ")</span>");
-    }
-    $('#placeholder').append("<br><br><br><br><br>");
-    for (var i = 0; i < array[2].length; i++) {
-        //$('#placeholder').append("<span>(" + array[2][i].toString() + ")</span>");
-        $('#placeholder').append("<span style= 'display:block;width:100px; height:100px; float:left; background-color: rgb(" + array[2][i].toString() + "')>(" + array[2][i].toString() + ")</span>");
-    }
-    $('#placeholder').append("<br><br><br><br><br>");
-    for (var i = 0; i < array[3].length; i++) {
-        //$('#placeholder').append("<span>(" + array[3][i].toString() + ")</span>");
-        $('#placeholder').append("<span style= 'display:block;width:100px; height:100px; float:left; background-color: rgb(" + array[3][i].toString() + "')>(" + array[3][i].toString() + ")</span>");
-    }
-    $('#placeholder').append("<br><br><br><br><br>");
-    for (var i = 0; i < array[4].length; i++) {
-        //$('#placeholder').append("<span>(" + array[3][i].toString() + ")</span>");
-        $('#placeholder').append("<span style= 'display:block;width:100px; height:100px; float:left; background-color: rgb(" + array[4][i].toString() + "')>(" + array[4][i].toString() + ")</span>");
-    }
-    $('#placeholder').append("<br><br><br><br><br>");
-    for (var i = 0; i < array[5].length; i++) {
-        //$('#placeholder').append("<span>(" + array[3][i].toString() + ")</span>");
-        $('#placeholder').append("<span style= 'display:block;width:100px; height:100px; float:left; background-color: rgb(" + array[5][i].toString() + "')>(" + array[5][i].toString() + ")</span>");
-    }
+    //$('#placeholder').append("<br><br><br><br><br><br>");
+    //for (var i = 0; i < array[1].length; i++) {
+    //    //$('#placeholder').append("<span>(" + array[1][i].toString() + ")</span>");
+    //    $('#placeholder').append("<span style= 'display:block;width:100px; height:100px; float:left; background-color: rgb(" + array[1][i].toString() + "')>(" + array[1][i].toString() + ")</span>");
+    //}
+    //$('#placeholder').append("<br><br><br><br><br><br>");
+    //for (var i = 0; i < array[2].length; i++) {
+    //    //$('#placeholder').append("<span>(" + array[2][i].toString() + ")</span>");
+    //    $('#placeholder').append("<span style= 'display:block;width:100px; height:100px; float:left; background-color: rgb(" + array[2][i].toString() + "')>(" + array[2][i].toString() + ")</span>");
+    //}
+    //$('#placeholder').append("<br><br><br><br><br><br>");
+    //for (var i = 0; i < array[3].length; i++) {
+    //    //$('#placeholder').append("<span>(" + array[3][i].toString() + ")</span>");
+    //    $('#placeholder').append("<span style= 'display:block;width:100px; height:100px; float:left; background-color: rgb(" + array[3][i].toString() + "')>(" + array[3][i].toString() + ")</span>");
+    //}
+    //$('#placeholder').append("<br><br><br><br><br><br>");
+    //for (var i = 0; i < array[4].length; i++) {
+    //    //$('#placeholder').append("<span>(" + array[3][i].toString() + ")</span>");
+    //    $('#placeholder').append("<span style= 'display:block;width:100px; height:100px; float:left; background-color: rgb(" + array[4][i].toString() + "')>(" + array[4][i].toString() + ")</span>");
+    //}
+    //$('#placeholder').append("<br><br><br><br><br><br>");
+    //for (var i = 0; i < array[5].length; i++) {
+    //    //$('#placeholder').append("<span>(" + array[3][i].toString() + ")</span>");
+    //    $('#placeholder').append("<span style= 'display:block;width:100px; height:100px; float:left; background-color: rgb(" + array[5][i].toString() + "')>(" + array[5][i].toString() + ")</span>");
+    //}
 
 
 

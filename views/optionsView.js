@@ -35,10 +35,10 @@ app.optionsView = Backbone.View.extend({
         //console.log(this.model.toJSON());
 
         this.$el.html(this.template(this.model.toJSON()));
-        //this.model.set("topLeftOption", "#000099");
-        //this.model.set("topRightOption", "#000000");
-        //this.model.set("bottomLeftOption", "#FFFF99");
-        //this.model.set("bottomRightOption", "#FF0000");
+        this.model.set("topLeftOption", "#000099");
+        this.model.set("topRightOption", "#000000");
+        this.model.set("bottomLeftOption", "#FFFF99");
+        this.model.set("bottomRightOption", "#FF0000");
 
         $('#topLeftPreview').css("background-color", this.model.get('topLeftOption'));
         $('#topRightPreview').css("background-color", this.model.get('topRightOption'));
@@ -54,7 +54,7 @@ app.optionsView = Backbone.View.extend({
 
         $('#generateGrid').click(function() {
             //debugger;
-            var x = generateGridArray(4, optionsM)
+            var x = generateGridArray(5, optionsM)
 
             fillArray(x);
 
