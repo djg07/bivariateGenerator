@@ -5,8 +5,9 @@
 var sizeTest = 3;
 var modelTest = optionsM;
 
-function generateGridArray(size, model) {
-
+function generateGridArray(model) {
+    debugger;
+    var size = model.get("size");
     var numberOfNodes = size*size;
     var adjustedSize = size+1;
     var array = [];
@@ -83,7 +84,7 @@ function fillArray(array) {
             debugger;
             $('#placeholder').append("<span style= 'display:block;width:100px; height:100px; float:left; background-color: rgb(" + array[i][k].toString() + "')>(" + array[i][k].toString() + ")</span>");
         }
-        $('#placeholder').append("<br><br><br><br><br><br>")
+        $('#placeholder').append("<br><br><br><br><br>")
         //$('#placeholder .span').addClass('gridElement');
     }
     //$('#placeholder').append("<br><br><br><br><br><br>");

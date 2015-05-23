@@ -26,19 +26,19 @@ app.optionsView = Backbone.View.extend({
     },
 
     gridChange: function(e) {
-        alert($('#gridSize').val());
+        $('#gridSize').val();
         this.model.set("size", $('#gridSize').val());
-        alert(this.model.get("size"));
+        //alert(this.model.get("size"));
     },
 
     render: function() {
         //console.log(this.model.toJSON());
 
         this.$el.html(this.template(this.model.toJSON()));
-        this.model.set("topLeftOption", "#000099");
-        this.model.set("topRightOption", "#000000");
-        this.model.set("bottomLeftOption", "#FFFF99");
-        this.model.set("bottomRightOption", "#FF0000");
+        //this.model.set("topLeftOption", "#000099");
+        //this.model.set("topRightOption", "#000000");
+        //this.model.set("bottomLeftOption", "#FFFF99");
+        //this.model.set("bottomRightOption", "#FF0000");
 
         $('#topLeftPreview').css("background-color", this.model.get('topLeftOption'));
         $('#topRightPreview').css("background-color", this.model.get('topRightOption'));
@@ -52,13 +52,26 @@ app.optionsView = Backbone.View.extend({
         $('#bottomLeftOption').val(this.model.get('bottomLeftOption'));
         $('#bottomRightOption').val(this.model.get('bottomRightOption'));
 
+        var gridSize = this.model.get('size');
+
+        if (gridSize.length < 1) {
+            $('#gridSize').val(3);
+        } else {
+            $('#gridSize').val(this.model.get('size'));
+        }
+
+
         $('#generateGrid').click(function() {
             //debugger;
-            var x = generateGridArray(5, optionsM)
+            var x = generateGridArray(optionsM)
 
             fillArray(x);
 
         });
+
+        $('#clearGrid').click(function() {
+            $('#placeholder').empty();
+        })
 
 
 
