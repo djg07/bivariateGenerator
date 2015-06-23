@@ -51,11 +51,12 @@ app.optionsView = Backbone.View.extend({
         $('#topRightOption').val(this.model.get('topRightOption'));
         $('#bottomLeftOption').val(this.model.get('bottomLeftOption'));
         $('#bottomRightOption').val(this.model.get('bottomRightOption'));
-
+        //debugger;
         var gridSize = this.model.get('size');
 
         if (gridSize.length < 1) {
             $('#gridSize').val(3);
+            this.model.set('size', 3);
         } else {
             $('#gridSize').val(this.model.get('size'));
         }

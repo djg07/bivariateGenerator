@@ -17,6 +17,7 @@ function generateGridArray(model) {
         //array.push(new Array(size+1).join(0).split(''))
     }
     //setting 4 corners
+    //debugger;
     array[0][0] = ConvertHexToRGB(model.get("topLeftOption"));
     array[0][size-1] = ConvertHexToRGB(model.get("topRightOption"));
     array[size-1][0] = ConvertHexToRGB(model.get("bottomLeftOption"));

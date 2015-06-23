@@ -15,6 +15,8 @@ var gridM = new app.gridModel({
     inputModel: optionsM
 })
 
+$('#placeholder').children().css("text-align", "center");
+
 
 
 

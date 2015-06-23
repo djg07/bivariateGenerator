@@ -1,10 +1,6 @@
 # bivariateGenerator
+### A tool to quickly generate colour schemes for a Bivariate Matrix
 
-** TODOS **
+Currently, the application only supports colour insertions by Hex Codes. However I am planning to implement RGB and a colour picker in the near future.
 
-- [ ] Implement optionsModel
-    - [ ] on re-render, set focus back to input 
-- [ ] gridModel
-    - [ ] get optionsModel params on 'generateGrid' click
-    - [ ] create function logic for calculating gridModel grid values
-    - [ ] display colours within grid and corresponding RGB + Hex Values
+
