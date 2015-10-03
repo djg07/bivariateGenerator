@@ -61,7 +61,8 @@
 }
 
 #placeholder {
-    width:600px;
-    margin-left:41%
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
