@@ -8,13 +8,11 @@ var app = app || {};
 app.optionsModel = Backbone.Model.extend({
 
     defaults: {
-
         size: "",
         topLeftOption: "",
         topRightOption: "",
         bottomLeftOption: "",
         bottomRightOption: ""
-
     },
 
     changeCSS: function(colour, id) {
@@ -26,17 +24,11 @@ app.optionsModel = Backbone.Model.extend({
         //
 
         //this.(id.toString()).css("color", "yellow");
-
-
     },
 
     changeValue: function(e) {
         var colour = $(e.currentTarget).val()
         var id = e.currentTarget.id;
         this.set(id.toString(), colour);
-
-
-
-
     }
 });

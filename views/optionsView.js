@@ -64,9 +64,9 @@ app.optionsView = Backbone.View.extend({
 
         $('#generateGrid').click(function() {
             //debugger;
-            var x = generateGridArray(optionsM)
+            var x = bvm.generateGridArray(optionsM)
 
-            fillArray(x);
+            bvm.fillArray(x);
 
         });
 
