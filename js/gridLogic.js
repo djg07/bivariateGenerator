@@ -52,7 +52,7 @@ var bvm = {
             }
             $('#placeholder').append("<br><br><br><br><br>")
         }
-
+        //test
     },
     getEdgeElementValue: function(size, position, lowColourArray, highColourArray) {
 
